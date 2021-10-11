@@ -1,0 +1,11 @@
+C:\Users\micha\source\repos\PRG282_Prject\bin\Debug\PRG282_Project.exe.config
+C:\Users\micha\source\repos\PRG282_Prject\bin\Debug\PRG282_Project.exe
+C:\Users\micha\source\repos\PRG282_Prject\bin\Debug\PRG282_Project.pdb
+C:\Users\micha\source\repos\PRG282_Prject\obj\Debug\PRG282_Project.csproj.AssemblyReference.cache
+C:\Users\micha\source\repos\PRG282_Prject\obj\Debug\PRG282_Project.Form1.resources
+C:\Users\micha\source\repos\PRG282_Prject\obj\Debug\PRG282_Project.Login_Form.resources
+C:\Users\micha\source\repos\PRG282_Prject\obj\Debug\PRG282_Project.Properties.Resources.resources
+C:\Users\micha\source\repos\PRG282_Prject\obj\Debug\PRG282_Project.csproj.GenerateResource.cache
+C:\Users\micha\source\repos\PRG282_Prject\obj\Debug\PRG282_Project.csproj.CoreCompileInputs.cache
+C:\Users\micha\source\repos\PRG282_Prject\obj\Debug\PRG282_Project.exe
+C:\Users\micha\source\repos\PRG282_Prject\obj\Debug\PRG282_Project.pdb
