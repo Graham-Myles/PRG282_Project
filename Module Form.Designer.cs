@@ -40,14 +40,16 @@ namespace PRG282_Project
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLogout2 = new System.Windows.Forms.Button();
+            this.btnToStudent = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDelete2 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch2 = new System.Windows.Forms.Button();
-            this.btnToStudent = new System.Windows.Forms.Button();
-            this.btnLogout2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,6 +61,7 @@ namespace PRG282_Project
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtModRes);
@@ -77,7 +80,7 @@ namespace PRG282_Project
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(35, 156);
+            this.label14.Location = new System.Drawing.Point(35, 122);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 13);
             this.label14.TabIndex = 36;
@@ -87,7 +90,7 @@ namespace PRG282_Project
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(99, 29);
+            this.label2.Location = new System.Drawing.Point(99, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 32;
@@ -96,7 +99,7 @@ namespace PRG282_Project
             // txtModRes
             // 
             this.txtModRes.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtModRes.Location = new System.Drawing.Point(137, 153);
+            this.txtModRes.Location = new System.Drawing.Point(137, 119);
             this.txtModRes.Name = "txtModRes";
             this.txtModRes.Size = new System.Drawing.Size(120, 20);
             this.txtModRes.TabIndex = 37;
@@ -104,7 +107,7 @@ namespace PRG282_Project
             // txtModDes
             // 
             this.txtModDes.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtModDes.Location = new System.Drawing.Point(137, 127);
+            this.txtModDes.Location = new System.Drawing.Point(137, 93);
             this.txtModDes.Name = "txtModDes";
             this.txtModDes.Size = new System.Drawing.Size(120, 20);
             this.txtModDes.TabIndex = 38;
@@ -112,7 +115,7 @@ namespace PRG282_Project
             // txtModName
             // 
             this.txtModName.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtModName.Location = new System.Drawing.Point(137, 101);
+            this.txtModName.Location = new System.Drawing.Point(137, 67);
             this.txtModName.Name = "txtModName";
             this.txtModName.Size = new System.Drawing.Size(120, 20);
             this.txtModName.TabIndex = 39;
@@ -120,7 +123,7 @@ namespace PRG282_Project
             // txtModCode
             // 
             this.txtModCode.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtModCode.Location = new System.Drawing.Point(137, 75);
+            this.txtModCode.Location = new System.Drawing.Point(137, 41);
             this.txtModCode.Name = "txtModCode";
             this.txtModCode.Size = new System.Drawing.Size(59, 20);
             this.txtModCode.TabIndex = 40;
@@ -129,7 +132,7 @@ namespace PRG282_Project
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(35, 78);
+            this.label7.Location = new System.Drawing.Point(35, 44);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 35;
@@ -139,7 +142,7 @@ namespace PRG282_Project
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(35, 104);
+            this.label6.Location = new System.Drawing.Point(35, 70);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 34;
@@ -149,7 +152,7 @@ namespace PRG282_Project
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(35, 130);
+            this.label4.Location = new System.Drawing.Point(35, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 33;
@@ -165,6 +168,28 @@ namespace PRG282_Project
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(292, 69);
             this.panel4.TabIndex = 3;
+            // 
+            // btnLogout2
+            // 
+            this.btnLogout2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnLogout2.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLogout2.Location = new System.Drawing.Point(193, 28);
+            this.btnLogout2.Name = "btnLogout2";
+            this.btnLogout2.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout2.TabIndex = 38;
+            this.btnLogout2.Text = "Logout";
+            this.btnLogout2.UseVisualStyleBackColor = false;
+            // 
+            // btnToStudent
+            // 
+            this.btnToStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnToStudent.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnToStudent.Location = new System.Drawing.Point(38, 28);
+            this.btnToStudent.Name = "btnToStudent";
+            this.btnToStudent.Size = new System.Drawing.Size(114, 23);
+            this.btnToStudent.TabIndex = 37;
+            this.btnToStudent.Text = "Go to Student Info";
+            this.btnToStudent.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -188,6 +213,7 @@ namespace PRG282_Project
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.btnDelete2);
             this.panel3.Controls.Add(this.txtSearch);
             this.panel3.Controls.Add(this.btnSearch2);
@@ -200,9 +226,9 @@ namespace PRG282_Project
             // 
             this.btnDelete2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnDelete2.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDelete2.Location = new System.Drawing.Point(290, 24);
+            this.btnDelete2.Location = new System.Drawing.Point(237, 23);
             this.btnDelete2.Name = "btnDelete2";
-            this.btnDelete2.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete2.Size = new System.Drawing.Size(56, 23);
             this.btnDelete2.TabIndex = 35;
             this.btnDelete2.Text = "Delete";
             this.btnDelete2.UseVisualStyleBackColor = false;
@@ -210,7 +236,7 @@ namespace PRG282_Project
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtSearch.Location = new System.Drawing.Point(43, 24);
+            this.txtSearch.Location = new System.Drawing.Point(49, 23);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 36;
@@ -219,34 +245,34 @@ namespace PRG282_Project
             // 
             this.btnSearch2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnSearch2.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSearch2.Location = new System.Drawing.Point(190, 24);
+            this.btnSearch2.Location = new System.Drawing.Point(175, 23);
             this.btnSearch2.Name = "btnSearch2";
-            this.btnSearch2.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch2.Size = new System.Drawing.Size(56, 23);
             this.btnSearch2.TabIndex = 37;
             this.btnSearch2.Text = "Search";
             this.btnSearch2.UseVisualStyleBackColor = false;
             // 
-            // btnToStudent
+            // button1
             // 
-            this.btnToStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnToStudent.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnToStudent.Location = new System.Drawing.Point(38, 28);
-            this.btnToStudent.Name = "btnToStudent";
-            this.btnToStudent.Size = new System.Drawing.Size(114, 23);
-            this.btnToStudent.TabIndex = 37;
-            this.btnToStudent.Text = "Go to Student Info";
-            this.btnToStudent.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(111, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // btnLogout2
+            // button2
             // 
-            this.btnLogout2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnLogout2.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogout2.Location = new System.Drawing.Point(182, 28);
-            this.btnLogout2.Name = "btnLogout2";
-            this.btnLogout2.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout2.TabIndex = 38;
-            this.btnLogout2.Text = "Logout";
-            this.btnLogout2.UseVisualStyleBackColor = false;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(299, 23);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(55, 23);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Update";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Module_Form
             // 
@@ -292,5 +318,7 @@ namespace PRG282_Project
         private System.Windows.Forms.Button btnSearch2;
         private System.Windows.Forms.Button btnToStudent;
         private System.Windows.Forms.Button btnLogout2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -60,8 +60,8 @@ namespace PRG282_Project
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnToModule = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnToModule = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,7 +85,6 @@ namespace PRG282_Project
             this.panel1.Controls.Add(this.txtStudentNum);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
@@ -98,7 +97,7 @@ namespace PRG282_Project
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(295, 369);
+            this.panel1.Size = new System.Drawing.Size(295, 360);
             this.panel1.TabIndex = 0;
             // 
             // txtCourse
@@ -203,7 +202,7 @@ namespace PRG282_Project
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdate.Location = new System.Drawing.Point(172, 310);
+            this.btnUpdate.Location = new System.Drawing.Point(351, 21);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 14;
@@ -214,7 +213,7 @@ namespace PRG282_Project
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.Location = new System.Drawing.Point(47, 310);
+            this.btnAdd.Location = new System.Drawing.Point(109, 312);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 13;
@@ -319,7 +318,7 @@ namespace PRG282_Project
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(307, 13);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(477, 428);
+            this.panel3.Size = new System.Drawing.Size(477, 419);
             this.panel3.TabIndex = 2;
             // 
             // dataGridView1
@@ -327,7 +326,7 @@ namespace PRG282_Project
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(18, 78);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(437, 330);
+            this.dataGridView1.Size = new System.Drawing.Size(437, 322);
             this.dataGridView1.TabIndex = 2;
             // 
             // panel5
@@ -337,6 +336,7 @@ namespace PRG282_Project
             this.panel5.Controls.Add(this.btnDelete);
             this.panel5.Controls.Add(this.txtSearch);
             this.panel5.Controls.Add(this.btnSearch);
+            this.panel5.Controls.Add(this.btnUpdate);
             this.panel5.Location = new System.Drawing.Point(-1, -1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(477, 61);
@@ -346,7 +346,7 @@ namespace PRG282_Project
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.Location = new System.Drawing.Point(315, 21);
+            this.btnDelete.Location = new System.Drawing.Point(270, 21);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 34;
@@ -365,7 +365,7 @@ namespace PRG282_Project
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSearch.Location = new System.Drawing.Point(215, 21);
+            this.btnSearch.Location = new System.Drawing.Point(189, 21);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 34;
@@ -378,21 +378,10 @@ namespace PRG282_Project
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.btnLogout);
             this.panel7.Controls.Add(this.btnToModule);
-            this.panel7.Location = new System.Drawing.Point(13, 379);
+            this.panel7.Location = new System.Drawing.Point(13, 371);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(295, 62);
+            this.panel7.Size = new System.Drawing.Size(295, 61);
             this.panel7.TabIndex = 1;
-            // 
-            // btnToModule
-            // 
-            this.btnToModule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnToModule.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnToModule.Location = new System.Drawing.Point(38, 19);
-            this.btnToModule.Name = "btnToModule";
-            this.btnToModule.Size = new System.Drawing.Size(114, 23);
-            this.btnToModule.TabIndex = 36;
-            this.btnToModule.Text = "Go to Module Info";
-            this.btnToModule.UseVisualStyleBackColor = false;
             // 
             // btnLogout
             // 
@@ -405,12 +394,23 @@ namespace PRG282_Project
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
+            // btnToModule
+            // 
+            this.btnToModule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnToModule.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnToModule.Location = new System.Drawing.Point(38, 19);
+            this.btnToModule.Name = "btnToModule";
+            this.btnToModule.Size = new System.Drawing.Size(114, 23);
+            this.btnToModule.TabIndex = 36;
+            this.btnToModule.Text = "Go to Module Info";
+            this.btnToModule.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(800, 453);
+            this.ClientSize = new System.Drawing.Size(800, 444);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
