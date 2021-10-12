@@ -52,5 +52,35 @@ namespace PRG282_Project
         {
             Environment.Exit(0);
         }
+
+        private void btnDelete2_Click(object sender, EventArgs e)
+        {
+            DatabaseHandler DH = new DatabaseHandler();
+            int id = Convert.ToInt32(txtSearch.Text);
+            DH.DeleteModule(id);
+            DH.displayModule();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DatabaseHandler DH = new DatabaseHandler();
+            int id = Convert.ToInt32(txtModCode.Text);
+            string name = txtModName.Text;
+            string description = txtModDes.Text;
+            string res = txtModRes.Text;
+            DH.UpdateModule(id, name, description, res);
+            DH.displayModule();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DatabaseHandler DH = new DatabaseHandler();
+            int id = Convert.ToInt32(txtModCode.Text);
+            string name = txtModName.Text;
+            string description = txtModDes.Text;
+            string res = txtModRes.Text;
+            DH.InsertModule(id, name, description, res);
+            DH.displayModule();
+        }
     }
 }

@@ -86,6 +86,7 @@ namespace PRG282_Project
             this.button1.TabIndex = 41;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label14
             // 
@@ -245,6 +246,7 @@ namespace PRG282_Project
             this.button2.TabIndex = 38;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDelete2
             // 
@@ -256,6 +258,7 @@ namespace PRG282_Project
             this.btnDelete2.TabIndex = 35;
             this.btnDelete2.Text = "Delete";
             this.btnDelete2.UseVisualStyleBackColor = false;
+            this.btnDelete2.Click += new System.EventHandler(this.btnDelete2_Click);
             // 
             // txtSearch
             // 
