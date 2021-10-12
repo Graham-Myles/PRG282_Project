@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\DataHandler.cs" />
+    <Compile Include="DataAccesLayer\DatabaseHandler.cs" />
+    <Compile Include="DataAccesLayer\FileHandler.cs" />
     <Compile Include="Student Form.cs">
       <SubType>Form</SubType>
     </Compile>
