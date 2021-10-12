@@ -502,6 +502,7 @@ namespace PRG282_Project
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Data Capture";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -552,12 +553,12 @@ namespace PRG282_Project
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

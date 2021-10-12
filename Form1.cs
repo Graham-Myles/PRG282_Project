@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PRG282_Project.DataAccesLayer;
+using PRG282_Project.BusinessLogicLayer;
+
 
 namespace PRG282_Project
 {
@@ -15,6 +18,13 @@ namespace PRG282_Project
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DatabaseHandler DH = new DatabaseHandler();
+            DH.displaystudent();
+            
         }
     }
 }
