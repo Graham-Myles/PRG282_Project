@@ -203,6 +203,7 @@ namespace PRG282_Project
             this.btnToStudent.TabIndex = 37;
             this.btnToStudent.Text = "Go to Student Info";
             this.btnToStudent.UseVisualStyleBackColor = false;
+            this.btnToStudent.Click += new System.EventHandler(this.btnToStudent_Click);
             // 
             // panel2
             // 

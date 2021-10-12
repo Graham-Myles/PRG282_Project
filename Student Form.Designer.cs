@@ -208,6 +208,7 @@ namespace PRG282_Project
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label13
             // 
@@ -309,6 +310,7 @@ namespace PRG282_Project
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel3
             // 
@@ -353,6 +355,7 @@ namespace PRG282_Project
             this.btnDelete.TabIndex = 34;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtSearch
             // 
@@ -407,6 +410,7 @@ namespace PRG282_Project
             this.btnToModule.TabIndex = 36;
             this.btnToModule.Text = "Go to Module Info";
             this.btnToModule.UseVisualStyleBackColor = false;
+            this.btnToModule.Click += new System.EventHandler(this.btnToModule_Click);
             // 
             // Student_Form
             // 

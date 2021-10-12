@@ -50,7 +50,11 @@ namespace PRG282_Project
 
         private void btnLogout2_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Module_Form modulefrm = new Module_Form();
+            Login_Form loginfrm = new Login_Form();
+
+            loginfrm.Show();
+            modulefrm.Close();
         }
 
         private void btnDelete2_Click(object sender, EventArgs e)
@@ -81,6 +85,15 @@ namespace PRG282_Project
             string res = txtModRes.Text;
             DH.InsertModule(id, name, description, res);
             DH.displayModule();
+        }
+
+        private void btnToStudent_Click(object sender, EventArgs e)
+        {
+            Student_Form studentfrm = new Student_Form();
+            Module_Form modulefrm = new Module_Form();
+            
+            studentfrm.Show();
+            modulefrm.Close();
         }
     }
 }

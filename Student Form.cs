@@ -47,7 +47,11 @@ namespace PRG282_Project
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Student_Form studentfrm = new Student_Form();
+            Login_Form loginfrm = new Login_Form();
+
+            loginfrm.Show();
+            studentfrm.Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -55,6 +59,55 @@ namespace PRG282_Project
             int id = Convert.ToInt32(txtSearch.Text);
             DatabaseHandler DH = new DatabaseHandler();
             dataGridView1.DataSource = DH.SearchStudent(id);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DatabaseHandler DH = new DatabaseHandler();
+            int id = Convert.ToInt32(txtStudentNum.Text);
+            string name = txtName.Text;
+            string surname = txtSurname.Text;
+            string Phonenumber = txtPhone.Text; 
+            int ModuleCode = Convert.ToInt32(txtCourse.Text);
+            string dob = txtDOB.Text;
+            string Addres = txtAddress.Text;
+            string Gender = txtGender.Text;
+            string Pic = txtImage.Text;
+            DH.UpdateStudent(id, name, surname, Phonenumber, ModuleCode, dob, Addres, Gender, Pic);
+            DH.displaystudent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            DatabaseHandler DH = new DatabaseHandler();
+            int id = Convert.ToInt32(txtStudentNum.Text);
+            string name = txtName.Text;
+            string surname = txtSurname.Text;
+            string Phonenumber = txtPhone.Text;
+            int ModuleCode = Convert.ToInt32(txtCourse.Text);
+            string dob = txtDOB.Text;
+            string Addres = txtAddress.Text;
+            string Gender = txtGender.Text;
+            string Pic = txtImage.Text;
+            DH.InsertStudent(id, name, surname, Phonenumber, ModuleCode, dob, Addres, Gender, Pic);
+            DH.displaystudent();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DatabaseHandler DH = new DatabaseHandler();
+            int id = Convert.ToInt32(txtSearch.Text);
+            DH.DeleteStudent(id);
+            DH.displaystudent();
+        }
+
+        private void btnToModule_Click(object sender, EventArgs e)
+        {
+            Student_Form studentfrm = new Student_Form();
+            Module_Form modulefrm = new Module_Form();
+
+            modulefrm.Show();
+            studentfrm.Close();
         }
     }
 }
