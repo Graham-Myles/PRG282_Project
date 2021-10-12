@@ -20,7 +20,7 @@ namespace PRG282_Project.DataAccesLayer
             try
             {
                 con.Open();
-                
+                con.Close();
 
             }
             catch (Exception ex)
@@ -80,12 +80,11 @@ namespace PRG282_Project.DataAccesLayer
 
         public void UpdateStudent(int id, string name, string surname, string Phonenumber, int ModuleCode)
         {
-            con.Open();
             try
             {
 
-                string line = "Update StudentInfo set  StudentName='" + name + "',StudentSurname= '" + surname + "', PhoneNumber='" + Phonenumber + "',ModuleCode='" + ModuleCode.ToString() + "' where StudentID= '" + id.ToString() + "'";
-                SqlCommand command = new SqlCommand(line, con);
+                string line = "Update StudentInfo set  values  StudentName='" + name + "',StudentSurname= '" + surname + "', PhoneNumber='" + Phonenumber + "',ModuleCode='" + ModuleCode.ToString() + "' where StudentID= '" + id.ToString() + "'";
+                SqlCommand command = new SqlCommand(line, sqlcon());
                 command.ExecuteNonQuery();
                 con.Close();
             }
@@ -100,15 +99,13 @@ namespace PRG282_Project.DataAccesLayer
                 MessageBox.Show("Data was updated");
 
             }
-            con.Close();
         }
 
-        public void InsertStudent(int id,string name, string surname, string Phonenumber, int ModuleCode, string dob, string Addres)
+        public void InsertStudent(string name, string surname, string Phonenumber, int ModuleCode, string dob, string Addres)
         {
-            con.Open();
             try
             {
-                string line = "Insert into StudentInfo(StudentID,StudentName,StudentSurname,PhoneNumber,DOB,Adress,ModuleCode) values('" + id.ToString() + "','" + name + "','" + surname + "','" + Phonenumber + "','" + dob + "','" + Addres + "','" + ModuleCode.ToString() + "')";
+                string line = "Insert into StudentInfo(StudentName,StudentSurname,PhoneNumber,DOB,Adress,ModuleCode) values('" + name + "','" + surname + "','" + Phonenumber + "','" + dob + "','" + Addres + "','" + ModuleCode.ToString() + "')";
                 SqlCommand command = new SqlCommand(line, con);
                 command.ExecuteNonQuery();
                 con.Close();
@@ -124,12 +121,10 @@ namespace PRG282_Project.DataAccesLayer
                 MessageBox.Show("Data was added");
 
             }
-            con.Close();
         }
 
         public void DeleteStudent(int StudentID)
         {
-            con.Open();
             try
             {
                 string line = "DELETE FROM StudentInfo WHERE StudentID= '" + StudentID.ToString() + "'";
@@ -148,18 +143,16 @@ namespace PRG282_Project.DataAccesLayer
                 MessageBox.Show("Data was Deleted");
 
             }
-            con.Close();
         }
 
 
 
         public void UpdateModule(int id, string Name, string Discription, string resources)
         {
-            
             try
             {
 
-                string line = "Update MDinfo set   ModuleName='" + Name + "',ModuleDescription= '" + Discription + "', OnlineResources='" + resources + "' where ModeluID= '" + id.ToString() + "'";
+                string line = "Update MDinfo set  values  ModuleName='" + Name + "',ModuleDescription= '" + Discription + "', OnlineResources='" + resources + "' where StudentID= '" + id.ToString() + "'";
                 SqlCommand command = new SqlCommand(line, sqlcon());
                 command.ExecuteNonQuery();
                 con.Close();
@@ -175,16 +168,13 @@ namespace PRG282_Project.DataAccesLayer
                 MessageBox.Show("Data was updated");
 
             }
-            con.Close();
         }
 
-        public void InsertModule(int id ,string Name, string Discription, string resources)
+        public void InsertModule(string Name, string Discription, string resources)
         {
-            con.Open();
             try
             {
-                
-                string line = "Insert into MDinfo(ModeluID,ModuleName,ModuleDescription,OnlineResources) values('" + id + "','" + Name + "','" + Discription + "','" + resources + "')";
+                string line = "Insert into MDinfo(ModuleName,ModuleDescription,OnlineResources) values('" + Name + "','" + Discription + "','" + resources + "')";
                 SqlCommand command = new SqlCommand(line, con);
                 command.ExecuteNonQuery();
                 con.Close();
@@ -198,17 +188,15 @@ namespace PRG282_Project.DataAccesLayer
             finally
             {
                 MessageBox.Show("Data was added");
-                
+
             }
-            con.Close();
         }
 
         public void DeleteModule(int id)
         {
-            con.Open();
             try
             {
-                string line = "DELETE FROM MDinfo WHERE ModeluID= '" + id.ToString() + "'";
+                string line = "DELETE FROM MDinfo WHERE StudentID= '" + id.ToString() + "'";
                 SqlCommand command = new SqlCommand(line, con);
                 command.ExecuteNonQuery();
                 con.Close();
@@ -224,7 +212,6 @@ namespace PRG282_Project.DataAccesLayer
                 MessageBox.Show("Data was Deleted");
 
             }
-            con.Close();
         }
 
         public DataTable SearchStudent(int id)

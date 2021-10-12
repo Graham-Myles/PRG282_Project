@@ -10,15 +10,3 @@ C:\Users\micha\Source\Repos\PRG282_Project\obj\Debug\PRG282_Project.csproj.CoreC
 C:\Users\micha\Source\Repos\PRG282_Project\obj\Debug\PRG282_Project.exe
 C:\Users\micha\Source\Repos\PRG282_Project\obj\Debug\PRG282_Project.pdb
 C:\Users\micha\Source\Repos\PRG282_Project\obj\Debug\PRG282_Project.Student_Form.resources
-C:\Users\micha\Source\Repos\PRG282_Projectv2\bin\Debug\PRG282_Project.exe.config
-C:\Users\micha\Source\Repos\PRG282_Projectv2\bin\Debug\PRG282_Project.exe
-C:\Users\micha\Source\Repos\PRG282_Projectv2\bin\Debug\PRG282_Project.pdb
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.csproj.AssemblyReference.cache
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.Student_Form.resources
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.Login_Form.resources
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.Module_Form.resources
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.Properties.Resources.resources
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.csproj.GenerateResource.cache
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.csproj.CoreCompileInputs.cache
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.exe
-C:\Users\micha\Source\Repos\PRG282_Projectv2\obj\Debug\PRG282_Project.pdb
