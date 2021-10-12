@@ -15,6 +15,7 @@ namespace PRG282_Project.BusinessLogicLayer
 {
     class DataHandler
     {
+        public DataHandler() { }
         public void LoginVerification(Employee person)
         {
             

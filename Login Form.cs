@@ -24,6 +24,7 @@ namespace PRG282_Project
             InitializeComponent();
         }
         DataHandler DHandler = new DataHandler();
+        FileHandler Fhandler = new FileHandler();
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
@@ -36,10 +37,14 @@ namespace PRG282_Project
             Employee temp = new Employee(username, pasword);
 
           DHandler.LoginVerification(temp);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        { 
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            Fhandler.Registration(username, password);
 
         }
     }
