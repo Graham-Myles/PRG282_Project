@@ -15,7 +15,6 @@ namespace PRG282_Project
         public Login_Form()
         {
             InitializeComponent();
-            
         }
     }
 }
