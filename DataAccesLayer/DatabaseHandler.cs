@@ -83,8 +83,9 @@ namespace PRG282_Project.DataAccesLayer
             try
             {
 
-                string line = "Update StudentInfo set  StudentName='" + name + "',StudentSurname= '" + surname + "', PhoneNumber='" + Phonenumber + "',ModuleCode='" + ModuleCode.ToString() + "',StudentImage='" + bm+ "' where StudentID= '" + id.ToString() + "'";
+                string line = "Update StudentInfo set  StudentName='" + name + "',StudentSurname= '" + surname + "', PhoneNumber='" + Phonenumber + "',ModuleCode='" + ModuleCode.ToString() + "',StudentImage=  @img "+" where StudentID= '" + id.ToString() + "'";
                 SqlCommand command = new SqlCommand(line, con);
+                command.Parameters.Add(new SqlParameter("@img", bm));
                 command.ExecuteNonQuery();
                 con.Close();
             }
@@ -107,8 +108,9 @@ namespace PRG282_Project.DataAccesLayer
             con.Open();
             try
             {
-                string line = "Insert into StudentInfo(StudentID,StudentName,StudentSurname,PhoneNumber,DOB,Adress,ModuleCode,Gender,StudentImage) values('" + id.ToString() + "','" + name + "','" + surname + "','" + Phonenumber + "','" + dob + "','" + Addres + "','" + ModuleCode.ToString() + "','"+gender+ "','" +bm+ "')";
+                string line = "Insert into StudentInfo(StudentID,StudentName,StudentSurname,PhoneNumber,DOB,Adress,ModuleCode,Gender,StudentImage) values('" + id.ToString() + "','" + name + "','" + surname + "','" + Phonenumber + "','" + dob + "','" + Addres + "','" + ModuleCode.ToString() + "','"+gender+ "', @img )";
                 SqlCommand command = new SqlCommand(line, con);
+                command.Parameters.Add(new SqlParameter("@img", bm));
                 command.ExecuteNonQuery();
                 con.Close();
             }

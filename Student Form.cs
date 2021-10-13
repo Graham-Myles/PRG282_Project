@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PRG282_Project.BusinessLogicLayer;
 using PRG282_Project.DataAccesLayer;
+using System.IO;
 
 namespace PRG282_Project
 {
@@ -25,7 +26,7 @@ namespace PRG282_Project
             dataGridView1.DataSource = DH.displaystudent();
 
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.BackColor = Color.White;
+            
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
@@ -82,11 +83,13 @@ namespace PRG282_Project
             string Gender = txtGender.Text;
             
             var opf = openFileDialog1.FileName;
-            Bitmap bm = new Bitmap(opf);
-            Image temp = bm;
-            DataHandler dh = new DataHandler();            
+           
+            DataHandler dh = new DataHandler();
+            FileStream fs = new FileStream(opf, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            var img = br.ReadBytes((int)fs.Length);
 
-            DH.UpdateStudent(id, name, surname, Phonenumber, ModuleCode, dh.ImageToByteArray(temp));
+            DH.UpdateStudent(id, name, surname, Phonenumber, ModuleCode, img);
             DH.displaystudent();
             pictureBox1.Image = null;
         }
