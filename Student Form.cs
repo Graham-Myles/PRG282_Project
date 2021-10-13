@@ -23,7 +23,14 @@ namespace PRG282_Project
         {
             DatabaseHandler DH = new DatabaseHandler();
             dataGridView1.DataSource = DH.displaystudent();
+
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox1.BackColor = Color.White;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
+
+        
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -33,7 +40,8 @@ namespace PRG282_Project
                 txtStudentNum.Text = row.Cells["StudentID"].Value.ToString();
                 txtName.Text = row.Cells["StudentName"].Value.ToString();
                 txtSurname.Text = row.Cells["StudentSurname"].Value.ToString();
-                
+                DataHandler dh = new DataHandler();                
+               
                 txtDOB.Text = row.Cells["DOB"].Value.ToString();
                 txtGender.Text = row.Cells["Gender"].Value.ToString();
                 txtPhone.Text = row.Cells["PhoneNumber"].Value.ToString();
@@ -72,9 +80,15 @@ namespace PRG282_Project
             string dob = txtDOB.Text;
             string Addres = txtAddress.Text;
             string Gender = txtGender.Text;
-            string Pic = txtImage.Text;
-            DH.UpdateStudent(id, name, surname, Phonenumber, ModuleCode);
+            
+            var opf = openFileDialog1.FileName;
+            Bitmap bm = new Bitmap(opf);
+            Image temp = bm;
+            DataHandler dh = new DataHandler();            
+
+            DH.UpdateStudent(id, name, surname, Phonenumber, ModuleCode, dh.ImageToByteArray(temp));
             DH.displaystudent();
+            pictureBox1.Image = null;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -88,9 +102,15 @@ namespace PRG282_Project
             string dob = txtDOB.Text;
             string Addres = txtAddress.Text;
             string Gender = txtGender.Text;
-            string Pic = txtImage.Text;
-            DH.InsertStudent(id, name, surname, Phonenumber, ModuleCode, dob, Addres, Gender);
+            
+            var opf = openFileDialog1.FileName;
+            Bitmap bm = new Bitmap(opf);
+            Image temp = bm;
+            DataHandler dh = new DataHandler();
+
+            DH.InsertStudent(id, name, surname, Phonenumber, ModuleCode, dob, Addres, Gender, dh.ImageToByteArray(temp));
             DH.displaystudent();
+            pictureBox1.Image = null;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -99,6 +119,7 @@ namespace PRG282_Project
             int id = Convert.ToInt32(txtSearch.Text);
             DH.DeleteStudent(id);
             DH.displaystudent();
+            pictureBox1.Image = null;
         }
 
         private void btnToModule_Click(object sender, EventArgs e)
@@ -108,6 +129,27 @@ namespace PRG282_Project
 
             modulefrm.Show();
             studentfrm.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+            openFileDialog1.ShowDialog();
+            if (openFileDialog1.CheckFileExists|| openFileDialog1.FileName!="openFileDialog1")
+            {
+                var opf = openFileDialog1.FileName;
+                Bitmap bm = new Bitmap(opf);
+                pictureBox1.Image = bm;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                MessageBox.Show("Fie does not exist");
+            }
+
+            
+
+
         }
     }
 }

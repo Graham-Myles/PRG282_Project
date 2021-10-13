@@ -23,6 +23,7 @@ namespace PRG282_Project
         {
             DatabaseHandler DH = new DatabaseHandler();
             dataGridView1.DataSource = DH.displayModule();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         private void btnSearch2_Click(object sender, EventArgs e)
@@ -41,11 +42,7 @@ namespace PRG282_Project
                 txtModName.Text = row.Cells["ModuleName"].Value.ToString();
                 txtModDes.Text = row.Cells["ModuleDescription"].Value.ToString();
                 txtModRes.Text = row.Cells["OnlineResources"].Value.ToString();
-
-
             }
-
-
         }
 
         private void btnLogout2_Click(object sender, EventArgs e)
@@ -54,7 +51,7 @@ namespace PRG282_Project
             Login_Form loginfrm = new Login_Form();
 
             loginfrm.Show();
-            modulefrm.Close();
+            modulefrm.Hide();
         }
 
         private void btnDelete2_Click(object sender, EventArgs e)

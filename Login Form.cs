@@ -47,5 +47,10 @@ namespace PRG282_Project
             Fhandler.Registration(username, password);
 
         }
+
+        private void Login_Form_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+        }
     }
 }

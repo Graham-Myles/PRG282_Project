@@ -148,6 +148,7 @@ namespace PRG282_Project
             this.Controls.Add(this.panel1);
             this.Name = "Login_Form";
             this.Text = "Login and Signup";
+            this.Load += new System.EventHandler(this.Login_Form_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

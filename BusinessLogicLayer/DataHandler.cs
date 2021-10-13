@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using PRG282_Project.DataAccesLayer;
 using PRG282_Project.PresentationLayer;
+using System.Drawing;
 
 
 namespace PRG282_Project.BusinessLogicLayer
@@ -18,13 +19,14 @@ namespace PRG282_Project.BusinessLogicLayer
         public DataHandler() { }
         public void LoginVerification(Employee person)
         {
-            
-            
-                using (StreamReader sr = File.OpenText(@"C:\Users\Marlouf\Source\Repos\PRG282_Project2\DATA\TextFile1.txt"))
+            Boolean acces = false;
+
+            using (StreamReader sr = File.OpenText(@"C:\Users\micha\source\repos\PRG282_Projectv4\DATA\TextFile1.txt"))
                 {
                     string input;
                     while ((input = sr.ReadLine()) != null)
                     {
+                    
                         string[] line = input.Split(',');
                         string username = line[0];
                         string password = line[1];
@@ -34,30 +36,46 @@ namespace PRG282_Project.BusinessLogicLayer
                         {
                             if (PS == password)
                             {
-                                MessageBox.Show("Welcome ");
-                                Student_Form st = new Student_Form();
-                                st.Show();
-                                Login_Form lg = new Login_Form();
-                                lg.Hide();
+                                acces = true;
+                                
                             }
-                            else
-                            {
-                               MessageBox.Show("Incorrect Password ");
-                            }
+                            
                         }
-                        else
-                        {
-                           MessageBox.Show("Incorrect P ");
-                       }
+                        
                     }
                 }
+            if (acces==true)
+            {
+                
+                Student_Form st = new Student_Form();
+                st.Show();
+                Login_Form lg = new Login_Form();
+                lg.Hide();
+                lg.Enabled = false;
+                MessageBox.Show("Welcome ");
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Details or Try Resgistering");
+            }
+
             
-           
 
+        }
 
-
-
-
+        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using PRG282_Project.Properties;
+using System.Drawing;
 
 namespace PRG282_Project.DataAccesLayer
 {
@@ -76,13 +77,13 @@ namespace PRG282_Project.DataAccesLayer
             return dt;
         }
 
-        public void UpdateStudent(int id, string name, string surname, string Phonenumber, int ModuleCode)
+        public void UpdateStudent(int id, string name, string surname, string Phonenumber, int ModuleCode, byte[] bm)
         {
             con.Open();
             try
             {
 
-                string line = "Update StudentInfo set  StudentName='" + name + "',StudentSurname= '" + surname + "', PhoneNumber='" + Phonenumber + "',ModuleCode='" + ModuleCode.ToString() + "' where StudentID= '" + id.ToString() + "'";
+                string line = "Update StudentInfo set  StudentName='" + name + "',StudentSurname= '" + surname + "', PhoneNumber='" + Phonenumber + "',ModuleCode='" + ModuleCode.ToString() + "',StudentImage='" + bm+ "' where StudentID= '" + id.ToString() + "'";
                 SqlCommand command = new SqlCommand(line, con);
                 command.ExecuteNonQuery();
                 con.Close();
@@ -101,12 +102,12 @@ namespace PRG282_Project.DataAccesLayer
             con.Close();
         }
 
-        public void InsertStudent(int id, string name, string surname, string Phonenumber, int ModuleCode, string dob, string Addres,string gender)
+        public void InsertStudent(int id, string name, string surname, string Phonenumber, int ModuleCode, string dob, string Addres,string gender,byte[] bm)
         {
             con.Open();
             try
             {
-                string line = "Insert into StudentInfo(StudentID,StudentName,StudentSurname,PhoneNumber,DOB,Adress,ModuleCode,Gender) values('" + id.ToString() + "','" + name + "','" + surname + "','" + Phonenumber + "','" + dob + "','" + Addres + "','" + ModuleCode.ToString() + "','"+gender+"')";
+                string line = "Insert into StudentInfo(StudentID,StudentName,StudentSurname,PhoneNumber,DOB,Adress,ModuleCode,Gender,StudentImage) values('" + id.ToString() + "','" + name + "','" + surname + "','" + Phonenumber + "','" + dob + "','" + Addres + "','" + ModuleCode.ToString() + "','"+gender+ "','" +bm+ "')";
                 SqlCommand command = new SqlCommand(line, con);
                 command.ExecuteNonQuery();
                 con.Close();
