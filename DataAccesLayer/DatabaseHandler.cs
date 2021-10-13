@@ -101,12 +101,12 @@ namespace PRG282_Project.DataAccesLayer
             con.Close();
         }
 
-        public void InsertStudent(int id, string name, string surname, string Phonenumber, int ModuleCode, string dob, string Addres)
+        public void InsertStudent(int id, string name, string surname, string Phonenumber, int ModuleCode, string dob, string Addres,string gender)
         {
             con.Open();
             try
             {
-                string line = "Insert into StudentInfo(StudentID,StudentName,StudentSurname,PhoneNumber,DOB,Adress,ModuleCode) values('" + id.ToString() + "','" + name + "','" + surname + "','" + Phonenumber + "','" + dob + "','" + Addres + "','" + ModuleCode.ToString() + "')";
+                string line = "Insert into StudentInfo(StudentID,StudentName,StudentSurname,PhoneNumber,DOB,Adress,ModuleCode,Gender) values('" + id.ToString() + "','" + name + "','" + surname + "','" + Phonenumber + "','" + dob + "','" + Addres + "','" + ModuleCode.ToString() + "','"+gender+"')";
                 SqlCommand command = new SqlCommand(line, con);
                 command.ExecuteNonQuery();
                 con.Close();

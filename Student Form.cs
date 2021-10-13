@@ -73,7 +73,7 @@ namespace PRG282_Project
             string Addres = txtAddress.Text;
             string Gender = txtGender.Text;
             string Pic = txtImage.Text;
-            DH.UpdateStudent(id, name, surname, Phonenumber, ModuleCode, dob, Addres, Gender, Pic);
+            DH.UpdateStudent(id, name, surname, Phonenumber, ModuleCode);
             DH.displaystudent();
         }
 
@@ -89,7 +89,7 @@ namespace PRG282_Project
             string Addres = txtAddress.Text;
             string Gender = txtGender.Text;
             string Pic = txtImage.Text;
-            DH.InsertStudent(id, name, surname, Phonenumber, ModuleCode, dob, Addres, Gender, Pic);
+            DH.InsertStudent(id, name, surname, Phonenumber, ModuleCode, dob, Addres, Gender);
             DH.displaystudent();
         }
 
